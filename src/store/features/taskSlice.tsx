@@ -11,6 +11,7 @@ export interface TaskState {
   selectedTask: Task | null;
   openAddTaskModal: boolean;
   openEditTaskModal: boolean;
+  openConfirmTaskModal: boolean;
 }
 
 const initialState: TaskState = {
@@ -21,6 +22,7 @@ const initialState: TaskState = {
   selectedTask: null,
   openAddTaskModal: false,
   openEditTaskModal: false,
+  openConfirmTaskModal: false,
 };
 
 export const taskSlice = createSlice({
@@ -68,6 +70,9 @@ export const taskSlice = createSlice({
     setOpenEditTaskModal: (state, action: PayloadAction<boolean>) => {
       state.openEditTaskModal = action.payload;
     },
+    setOpenConfirmTaskModal: (state, action: PayloadAction<boolean>) => {
+      state.openConfirmTaskModal = action.payload;
+    },
     resetState: (state) => {
       state.filterByTask = initialState.filterByTask;
       state.checkedPriorities = initialState.checkedPriorities;
@@ -85,6 +90,7 @@ export const {
   setSelectedTask,
   setOpenAddTaskModal,
   setOpenEditTaskModal,
+  setOpenConfirmTaskModal,
   addNewTask,
   updateTask,
   deleteTask,

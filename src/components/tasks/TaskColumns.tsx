@@ -21,7 +21,7 @@ import { Button } from "../ui/button";
 import { format } from "date-fns";
 import { useAppDispatch } from "@/utils/hook";
 import {
-  deleteTask,
+  setOpenConfirmTaskModal,
   setOpenEditTaskModal,
   setSelectedTask,
 } from "@/store/features/taskSlice";
@@ -115,7 +115,8 @@ const TaskActions: React.FC<{ row: Row<Task> }> = ({ row }) => {
         variant="outline"
         size="icon"
         onClick={() => {
-          dispatch(deleteTask(row.original));
+          dispatch(setOpenConfirmTaskModal(true));
+          dispatch(setSelectedTask(row.original));
         }}
       >
         <Trash2 />

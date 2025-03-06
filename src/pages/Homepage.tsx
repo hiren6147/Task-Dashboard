@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import StatCards from "@/components/StatCards";
 import TaskArea from "@/components/tasks/TaskArea";
+import TaskConfirmDialog from "@/components/tasks/TaskConfirmDialog";
 import TaskEditDialog from "@/components/tasks/TaskEditDialog";
 import { useTheme } from "@/components/theme-provider";
 import { fetchTasks } from "@/store/features/taskSlice";
@@ -22,6 +23,7 @@ const Homepage: React.FC = () => {
       <StatCards />
       <TaskArea />
       <TaskEditDialog />
+      <TaskConfirmDialog />
     </div>
   );
 };
