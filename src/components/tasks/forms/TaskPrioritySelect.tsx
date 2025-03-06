@@ -40,7 +40,9 @@ const TaskPrioritySelect: React.FC = () => {
   } = useFormContext<TaskFormData>();
   return (
     <div className="flex flex-col gap-2">
-      <Label className="opacity-75 text-sm font-medium">Priority</Label>
+      <Label className="opacity-75 text-sm font-medium">
+        Priority<span className="text-red-500">*</span>
+      </Label>
       <Controller
         name="priority"
         control={control}

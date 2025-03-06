@@ -21,12 +21,13 @@ const TaskInput: React.FC<TaskInputProps> = ({
     <div className="flex flex-col gap-2">
       <Label htmlFor={name} className="opacity-75 text-sm font-medium">
         {label}
+        <span className="text-red-500">*</span>
       </Label>
       <Input
         {...register(name)}
         type="text"
         className="h-11"
-        placeholder="Enter Text"
+        placeholder={`Enter ${name}`}
       />
       {errors[name] && (
         <p className="text-red-500 text-sm">{errors[name].message}</p>

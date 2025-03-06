@@ -44,7 +44,7 @@ export const taskSlice = createSlice({
     },
     addNewTask: (state, action: PayloadAction<Task>) => {
       state.tasks?.push(action.payload);
-      toast("Task is created successfully");
+      toast.success("Task is created successfully");
     },
     updateTask: (state, action: PayloadAction<Task>) => {
       const taskIndex = state.tasks?.findIndex(
@@ -53,14 +53,14 @@ export const taskSlice = createSlice({
       if (taskIndex !== undefined && taskIndex !== -1 && state.tasks) {
         state.tasks[taskIndex] = action.payload;
       }
-      toast("Task is updated successfully");
+      toast.success("Task is updated successfully");
     },
     deleteTask: (state, action: PayloadAction<Task>) => {
       const filter = state.tasks?.filter(
         (task) => task.id !== action.payload.id
       );
       state.tasks = filter ?? null;
-      toast("Task is deleted successfully");
+      toast.success("Task is deleted successfully");
     },
     setOpenAddTaskModal: (state, action: PayloadAction<boolean>) => {
       state.openAddTaskModal = action.payload;
@@ -109,7 +109,7 @@ export const fetchTasks = () => async (dispatch: Dispatch) => {
       }, 1000);
     });
   } catch (error) {
-    console.error("Failed to Fetch Data", error);
+    toast.error(`Failed to Fetch Data- ${error}`);
     dispatch(setTasks(null));
   }
 };

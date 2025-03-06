@@ -151,6 +151,9 @@ export const TasksColumns: ColumnDef<Task>[] = [
   {
     accessorKey: "id",
     header: "ID",
+    cell: ({ row }) => {
+      return <div className="ml-2">{Number(row.id) + 1}</div>;
+    },
   },
   {
     accessorKey: "title",

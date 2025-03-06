@@ -20,7 +20,9 @@ const TaskDatePicker: React.FC = () => {
   } = useFormContext<TaskFormData>();
   return (
     <div className="flex flex-col gap-2">
-      <Label className="opacity-75 text-sm font-medium">Due Date</Label>
+      <Label className="opacity-75 text-sm font-medium">
+        Due Date<span className="text-red-500">*</span>
+      </Label>
       <Controller
         name="dueDate"
         control={control}

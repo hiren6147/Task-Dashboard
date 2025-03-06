@@ -40,7 +40,9 @@ const TaskStatusSelect: React.FC = () => {
   } = useFormContext<TaskFormData>();
   return (
     <div className="flex flex-col gap-2">
-      <Label className="opacity-75 text-sm font-medium">Status</Label>
+      <Label className="opacity-75 text-sm font-medium">
+        Status<span className="text-red-500">*</span>
+      </Label>
       <Controller
         name="status"
         control={control}
