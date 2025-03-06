@@ -1,5 +1,5 @@
 {
-  "name": "react-task-manager",
+  "name": "task-dashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "setup": "npm install"
+    "setup": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
