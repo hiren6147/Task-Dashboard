@@ -79,19 +79,19 @@ Make sure you have Node.js and npm (or yarn, pnpm) installed.
     **npm:**
 
     ```bash
-    npm install
+    npm install --legacy-peer-deps
     ```
 
     **yarn:**
 
     ```bash
-    yarn install
+    yarn install --legacy-peer-deps
     ```
 
     **pnpm:**
 
     ```bash
-    pnpm install
+    pnpm install --legacy-peer-deps
     ```
 
 ### Running the Development Server
