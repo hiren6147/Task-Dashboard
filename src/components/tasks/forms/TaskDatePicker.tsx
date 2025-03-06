@@ -18,6 +18,7 @@ const TaskDatePicker: React.FC = () => {
     control,
     formState: { errors },
   } = useFormContext<TaskFormData>();
+
   return (
     <div className="flex flex-col gap-2">
       <Label className="opacity-75 text-sm font-medium">
@@ -45,12 +46,12 @@ const TaskDatePicker: React.FC = () => {
                   <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
+              <PopoverContent className="w-auto p-0 z-50" align="start">
                 <Calendar
                   mode="single"
                   selected={field.value}
                   onSelect={field.onChange}
-                  disabled={(date) => date < new Date("1900-01-01")}
+                  disabled={(date) => date < new Date(Date.now() - 864e5)}
                   initialFocus
                 />
               </PopoverContent>
