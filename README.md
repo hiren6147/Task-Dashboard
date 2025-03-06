@@ -52,3 +52,54 @@ export default tseslint.config({
   },
 })
 ```
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn, pnpm) installed.
+
+-   **Node.js:** [Download and install Node.js](https://nodejs.org/) (LTS version recommended)
+-   **npm:** Comes with Node.js.
+-   **yarn (optional):** `npm install -g yarn`
+-   **pnpm (optional):** `npm install -g pnpm`
+
+### Installation
+
+1.  Clone the repository:
+
+    ```bash
+    git clone https://github.com/hiren6147/Task-Dashboard.git
+    cd Task-Dashboard
+    ```
+
+2.  Install dependencies using npm, yarn, or pnpm:
+
+    **npm:**
+
+    ```bash
+    npm install
+    ```
+
+    **yarn:**
+
+    ```bash
+    yarn install
+    ```
+
+    **pnpm:**
+
+    ```bash
+    pnpm install
+    ```
+
+### Running the Development Server
+
+To start the development server, run:
+
+**npm:**
+
+```bash
+npm run dev
+```
