@@ -52,7 +52,6 @@ const TaskDatePicker: React.FC = () => {
                   selected={field.value}
                   onSelect={field.onChange}
                   disabled={(date) => date < new Date(Date.now() - 864e5)}
-                  initialFocus
                 />
               </PopoverContent>
             </Popover>
